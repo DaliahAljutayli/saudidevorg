@@ -1,4 +1,5 @@
 #Numbers
+import random
 
 #1 Types of Numbers in Python
 x = 5 #int
@@ -20,9 +21,7 @@ print(x,' Convert into float: ',float(x),', into Complex: ',complex(x))
 y = 11.5 #float
 print(y,' Convert into int: ',int(y),', into Complex: ',complex(y))
 
-
-
-
-
-
+#4 Random Number
+   #1st import random library above 
+print('Random number between 1 and 5: ',random.randrange(1,5))
 
