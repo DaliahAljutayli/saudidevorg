@@ -1,0 +1,2 @@
+Hello and Welcome to FileName.txt
+that opened by Python !Writting New Line!Writting New Line!Writting New Line!
