@@ -1,0 +1,76 @@
+<DOCTYPE html>
+<html>
+<head>
+   <title>Order Product</title>
+   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/OProducts.css')}}">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  
+</head>
+<body >
+ <!-- Head -->
+  <div class="logo">
+   <img src="/static/img/logo2.png" alt="logo"> 
+   <h1>Candle Shop</h1>
+</div>
+
+<!-- Nav Bar-->
+<div class="Bar">
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+     <ul class="nav navbar-nav">
+      <li><a href={{ url_for('home')}} >الرئيسية</a></li>
+      <li><a href={{ url_for('about')}}>عن موقعنا</a></li>
+      <li><a href={{ url_for('products')}}>المنتجات</a></li>
+      <li><a href={{ url_for('order')}}>اطلب هنا</a></li>
+      <li><a href={{ url_for('contact')}}>تواصل معنا</a></li>
+    </ul>
+  </div>
+</nav>
+ </div> 
+
+
+<!-- Form -->
+<div class="Form">
+{% block content %}
+<form name="PassData" action="." method="POST">
+      <label for="Type">نوع المنتج</label>
+    <select id="Type" name="Type">
+      <option value="1">كريم وجة</option>
+      <option value="2">قناع وجة</option>
+      <option value="3">زيوت عطرية</option>
+      <option value="4">شمعات معطرة</option>
+    </select>
+	<br>
+    <label for="prodactname">اسم المنتج</label>
+    <select id="productname" name="productname">
+      <option value="netrogena">نيتروجينا</option>
+      <option value="loreal">لوريال</option>
+      <option value="Lavender Candle">شمعة بعطر اللافندر</option>
+    </select>
+	<br>
+    <label for="quantity">الكمية</label>
+    <select id="quantity" name="quantity">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+    </select>
+	<p>الحد الأقصى لكمية الطلب للفرد الواحد: 3 لكل منتج.</p>
+	<br>
+
+    <input type="submit" value="ارسال الطلـب">
+  </form> {% endblock %}
+</div> 
+
+
+<!-- Footer-->
+<div class="footer">
+  <p>جميع الحقوق محفوظة 2019</p>
+</div> 
+
+</body>
+
+</html>

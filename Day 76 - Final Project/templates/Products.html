@@ -1,0 +1,99 @@
+<DOCTYPE html>
+<html>
+<head>
+   <title>Products</title>
+   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/Producst.css')}}">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  
+</head> {% block body %}
+<body >
+ <!-- Head -->
+  <div class="logo">
+   <img src="/static/img/logo2.png" alt="logo"> 
+   <h1>Candle Shop</h1>
+</div>
+
+<!-- Nav Bar-->
+<div class="Bar">
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+      <li><a href={{ url_for('home')}} >الرئيسية</a></li>
+      <li><a href={{ url_for('about')}}>عن موقعنا</a></li>
+      <li><a href={{ url_for('products')}}>المنتجات</a></li>
+      <li><a href={{ url_for('order')}}>اطلب هنا</a></li>
+      <li><a href={{ url_for('contact')}}>تواصل معنا</a></li>
+    </ul>
+  </div>
+</nav>
+ </div> 
+ </div>
+ <!-- List  -->
+ <form class='List'>
+         <select name = "dropdown" onchange="location = this.value;">
+            <option value = "{{ url_for('order')}}"> أقنعة الوجة </option>
+            <option value = "{{ url_for('order')}}">شمعات وزيوت عطرية</option>
+            <option value = "{{ url_for('order')}}">كريمات للوجهة</option>
+         </select>
+   </form> 
+
+
+<!-- Columns -->
+<div class="container">
+
+  <div class="row">
+  
+    <div class="col-sm-4">
+	  <img src="/static/img/netru.jpg">
+      <h3>شمعة بريحة الافيندور</h3>
+      <p>شمعة عطرية برائحة زيت اللافيندر تدوم لمدة طويلة</p>
+    </div>
+	
+    <div class="col-sm-4">
+	  <img src="/static/img/pure care.jpg">
+      <h3>لوريال - قناع وجهة طين بالفحم الأسود</h3>
+      <p><br><br> للتخلّص تماماً من الأوساخ والشوائب. يتمتّع ماسك الوجه هذا المنظّف بعمق</p>
+    </div>	
+	
+    <div class="col-sm-4">
+	  <img src="/static/img/perv.jpg">
+      <h3>كريم Revita Lift</h3>
+      <p>ييرطب ويدعم عملية التجديد الطبيعي للجلد الخاص بك</p>
+    </div> 
+   </div>
+
+  <div class="row2">
+  <div class="col-sm-4">
+	  <img src="/static/img/tea Mask.jpg">
+      <h3>ذي بودي شوب - كريم شجرة الشاي الأخضر</h3>
+      <p>زيت شجرة الشاي مشهور بخواصه المطهرة والمعالجة لمشاكل البشرة المختلفة ومن ضمنها مشكلة حب الشباب</p>
+    </div>
+	
+    <div class="col-sm-4">
+	  <img src="/static/img/pure.jpg">
+      <h3>ءجة الطين النقي</h3>
+      <p><br><br>للتخلّص تماماً من الأوساخ والشوائب. يتمتّع ماسك الوجه هذا المنظّف بعمق</p>
+    </div>	
+	
+    <div class="col-sm-4">
+	  <img src="/static/img/pure red.jpg">
+      <h3>شمعة بريحة الفانيلا</h3>
+      <p>تمتع برائحة عبق الفانيلا </p>
+    </div> 
+ </div> 
+
+
+
+<!-- Footer-->
+<div class="footer">
+  <p>جميع الحقوق محفوظة 2019</p>
+</div> 
+{% endblock %}
+</body>
+
+</html>
